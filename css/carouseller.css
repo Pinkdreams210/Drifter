@@ -1,0 +1,190 @@
+/*carouseller.js 0.32b https://github.com/shrue348/responsive.carouseller Open source under the MIT License. Copyright © 2015-2017 Aleksander Alekseev All rights reserved.*/
+.carouseller:before, .carouseller:after {  content: " ";  display: table;}
+.carouseller:after { clear: both;}
+.carouseller { position: relative;}
+
+.carouseller [class*="car__"]{
+	display: inline-block; 
+	position: relative;
+    margin-left: 0.2564102564102564% !important;
+    *margin-left: 0.25109110747408616% !important;
+    float: left;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.carouseller [class*="car__"]:first-child  { margin-left: 0 !important;}
+.carouseller [class*="car__"]:nth-child(n+7) { display: none;}
+
+/*.carouseller .car__by5 { width: 1.793789743589745%;}
+.carouseller .car__12 { width: 10%;}
+.carouseller .car__6 { width: 4.8837948717948715%;}
+.carouseller .car__4 { width: 3.1703931623931625%;}*/
+.carouseller .car__3 { width: 2.3136923076923077%;}
+/*.carouseller .car__2 { width: 1.452991452991453%;}
+.carouseller .car__1 { width: 0.5982905982905983%;}*/
+
+.carouseller .carouseller__list { position: relative; width: 997.4358974358974%;}
+.carouseller .carouseller__wrap { overflow: hidden; position: relative; margin: 0 auto;}
+
+/*------New Product-----------*/
+.box03 .carouseller .carouseller__left, 
+.box03 .carouseller .carouseller__right {
+	position: absolute; 
+	margin: 0; 
+    background: none repeat scroll 0 0 transparent;
+	height:60px;
+	width:20px;
+	font-size:0;
+    text-align: center;
+	text-decoration: none;	
+-moz-transform: skew(18deg,0deg);
+-webkit-transform: skew(18deg,0deg);
+-o-transform: skew(18deg,0deg);
+-ms-transform: skew(18deg,0deg);
+  transform: skew(18deg,0deg);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  align-content:center;
+}
+.box03 .carouseller .carouseller__left { right: 55px;
+background:url(../images/arrow03.png) left center no-repeat;}
+.box03 .carouseller .carouseller__right { right: 25px;
+background:url(../images/arrow02.png) right center no-repeat;}
+.box03 .carouseller .carouseller__left:hover, .box03 .carouseller .carouseller__right:hover { opacity: 0.5;}
+
+/*------List Product-----------*/
+.box05 .carouseller .carouseller__left, 
+.box05 .carouseller .carouseller__right {
+	position: absolute; 
+	margin: 0; 
+    background: none repeat scroll 0 0 transparent;
+	height:60px;
+	width:60px;
+	font-size:0;
+    text-align: center;
+	text-decoration: none;	
+-moz-transform: skew(-18deg,0deg);
+-webkit-transform: skew(-18deg,0deg);
+-o-transform: skew(-18deg,0deg);
+-ms-transform: skew(-18deg,0deg);
+  transform: skew(-18deg,0deg);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  align-content:center;
+  z-index:99;
+	-webkit-transition: all ease 0.4s;
+	-moz-transition: all ease 0.4s;
+	transition: all ease 0.4s;
+	top:-60px;
+}
+.box05 .carouseller .carouseller__left { left: 10px;
+background:url(../images/arrow03.png) center center no-repeat #495D75;}
+.box05 .carouseller .carouseller__right { right: 10px;
+background:url(../images/arrow02.png) center center no-repeat #495D75;}
+.box05 .carouseller .carouseller__left:hover, .box05 .carouseller .carouseller__right:hover { 
+background-color:#7f93ac;}
+
+
+/*------Responsive-----------*/
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { 
+	.carouseller .car__by5,
+	.carouseller .car__12,
+	.carouseller .car__6,
+	.carouseller .car__4,
+	.carouseller .car__3,
+	.carouseller .car__2,
+	.carouseller .car__1 { width: 3.1623931623931625%;}
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+	.carouseller .car__by5,
+	.carouseller .car__12,
+	.carouseller .car__6,
+	.carouseller .car__4,
+	.carouseller .car__3,
+	.carouseller .car__2,
+	.carouseller .car__1 { width: 4.8717948717948715%;}
+	/*------New Product-----------*/
+	.box05 .content{
+		padding:0;
+	}
+.box03 .carouseller .next-prev, .box05 .carouseller .next-prev{
+	width:100%;
+	height: 60px;
+position: absolute;
+top: 50%;
+transform:translateY(-50%);
+left: 0;
+content: '';
+}
+.box03 .carouseller .carouseller__left, 
+.box03 .carouseller .carouseller__right,
+.box05 .carouseller .carouseller__left, 
+.box05 .carouseller .carouseller__right {
+	height:60px;
+	width:60px;
+-moz-transform: none;
+-webkit-transform:none;
+-o-transform: none;
+-ms-transform: none;
+  transform: none;
+	text-align:center;
+	opacity:0.3;
+	-webkit-transition: all ease 0.4s;
+	-moz-transition: all ease 0.4s;
+	transition: all ease 0.4s;
+
+}
+.box03 .carouseller .carouseller__left, 
+.box03 .carouseller .carouseller__right{
+	top:inherit;
+}
+
+.box03 .carouseller .carouseller__left, .box05 .carouseller .carouseller__left { 
+right: inherit;
+left:0;
+background:url(../images/btn_prev-sp.png) center center no-repeat #FFF;}
+.box03 .carouseller .carouseller__right, .box05 .carouseller .carouseller__right  { 
+right: 0;
+background:url(../images/btn_next-sp.png) center center no-repeat #FFF;}
+
+.box05 .carouseller .carouseller__left { 
+top:0;
+right: inherit;
+left:-10px;
+background:url(../images/btn_prev-sp.png) center center no-repeat #FFF;}
+.box05 .carouseller .carouseller__right  {
+	top:0; 
+right: -10px;
+background:url(../images/btn_next-sp.png) center center no-repeat #FFF;}
+.box03 .carouseller .carouseller__left:hover, .box03 .carouseller .carouseller__right:hover,
+.box05 .carouseller .carouseller__left:hover, .box05 .carouseller .carouseller__right:hover
+ { opacity: 0.5;}
+
+.carouseller .carouseller__wrap{
+	width: calc(100% - 60px);
+text-align: center;
+margin: 0 auto;
+}
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.carouseller .car__by5,
+	.carouseller .car__12,
+	.carouseller .car__6,
+	.carouseller .car__4,
+	.carouseller .car__3,
+	.carouseller .car__2,
+	.carouseller .car__1 { width: 10%;}
+}
+
+
+
+/* This can be deleted */
+/*[class*="car__"] { text-align: center; font-size: 30px; font-weight: bold; background-color: #e5e5e5;}*/
+h1 {font-size: 40px; margin-bottom: 30px;}
+.carouseller { margin-bottom: 20px;}
